@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar"
 import clientPromise from "@/lib/mongodb"
 
+
 const Navbar = async () => {
     const session = await auth()
     const client = await clientPromise;
