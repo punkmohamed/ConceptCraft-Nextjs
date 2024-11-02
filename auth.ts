@@ -12,6 +12,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       profile: { id, login, bio },
     }) {
       try {
+        console.log("Sign in callback:", { name, email, image, id, login, bio });
         const client = await clientPromise;
         const db = client.db("Times");
         const userModel = db.collection("authors")
